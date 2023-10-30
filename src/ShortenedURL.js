@@ -7,4 +7,5 @@ function ShortenedURL(props) {
     </div>
   );
 }
+
 export default ShortenedURL;
