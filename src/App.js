@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
+import ShortenedURL from './ShortenedURL';
 
 function App() {
   const [longURL, setLongURL] = useState('');
@@ -17,9 +18,7 @@ function App() {
         <input type='text' id='longURL' value={longURL} onChange={(e) => setLongURL(e.target.value)}/>
       </div>
       <button className='btn' onClick={handleClick}>shorten URL</button>
-      <div className='result'>
-        <p id='shortURL'>{shortURL}</p>
-      </div>
+      <ShortenedURL shortURL={shortURL}/>
     </div>
   );
 }
